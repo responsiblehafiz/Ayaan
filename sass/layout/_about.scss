@@ -1,0 +1,84 @@
+.about-section{
+    background: $white;
+
+    .about-left{
+        .thumb{
+            img{
+                border-radius: 10px;
+                @media (max-width:991px){
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .about-right{
+        margin-left: 75px;
+        @media (max-width:991px){
+            margin-left: inherit;
+            margin-top: 40px;
+        }
+        p{
+          font-family: $body-font;
+          color: $primary3-color;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+          @include lg{
+            display: none;
+          }
+          @include xl{
+            display: none;
+          }
+        }
+        .feature-iteams{
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin: 21px 0 35px;
+            .star{
+                height: 80px;
+                width: 80px;
+                line-height: 90px;
+                background: $primary-color;
+                border-radius: 16px;
+                text-align: center;
+                @include lg{
+                    height: 110px;
+                    width: 110px;
+                    line-height: 110px;
+                }
+                @include xl{
+                    height: 110px;
+                    width: 110px;
+                    line-height: 110px;
+                }
+                i{
+                    font-size: 30px;
+                    color: $white;
+                }
+            }
+            .text{
+                h5{
+                    font-family: $body-font;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 40px !important;
+                    color: $primary-color;
+                }
+            }
+            &:hover{
+                   i{
+                    animation: wobble_spatial 1s forwards ease-in-out 0s;;
+                   }
+            }
+        }
+        .thumb{
+            img{
+                @media (max-width:991px){
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

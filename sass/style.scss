@@ -1,0 +1,34 @@
+@import "utils/variables";
+@import "utils/keyframes";
+@import "utils/mixin";
+@import "utils/unittest";
+
+
+@import "partials/default-spacing";
+@import "partials/header";
+@import "partials/menu-sidebar";
+@import "partials/main-menu";
+@import "partials/scrollup";
+@import "partials/hero";
+@import "partials/odomater";
+@import "partials/theme-default";
+@import "partials/title-section";
+@import "partials/btn";
+
+
+@import "theme/section-title";
+@import "theme/animation";
+@import "theme/loader";
+@import "theme/cursor";
+
+
+@import "layout/about";
+@import "layout/marquee";
+@import "layout/service-1";
+@import "layout/choose-section";
+@import "layout/work-section";
+@import "layout/pricing-section";
+@import "layout/testimonial-style_1";
+@import "layout/blog-section_1";
+@import "layout/contact-wrapper";
+@import "layout/footer-section";

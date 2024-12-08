@@ -1,0 +1,203 @@
+
+
+// Button styles
+.thm-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  span {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    appearance: none;
+    outline: none !important;
+    font-weight: 600;
+    font-size: 16px;
+    color: $white;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-family: $body-font;
+    background-color: $btn-color;
+    z-index: 2;
+    text-align: center;
+    overflow: hidden;
+    transition: all 500ms ease;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: $primary-color;
+      background-position: left center;
+      transform-origin: left;
+      transform-style: preserve-3d;
+      transform: scaleX(0);
+      transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+      z-index: -1;
+    }
+  }
+
+  &:hover {
+    span {
+      color: $white;
+
+      &::before {
+        transform: scaleX(1.0);
+        transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+      }
+    }
+  }
+
+  > i {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: $btn-color;
+    border-radius: 50%;
+    font-size: 18px;
+    color: $white;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 500ms ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: $primary-color;
+      background-position: right center;
+      transform-origin: right;
+      transform-style: preserve-3d;
+      transform: scaleX(0);
+      transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+      z-index: -1;
+    }
+  }
+
+  &:hover {
+    i {
+      color: $white;
+
+      &::after {
+        transform: scaleX(1.0);
+        transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+      }
+    }
+  }
+}
+
+
+.circle-btn{
+    height: 130px;
+    width: 130px;
+    display: inline-flex;
+    border: 1px solid $secondary-color;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-family: $body-font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $primary-color;
+    background: $primary-color;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    i{
+        display: inline-block;
+        margin-bottom: -30px;
+        font-weight: 300;
+        color: $primary-color;
+        @include transition;
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $white;
+        z-index: -1;
+        transition: .5s;
+    }
+    &:hover::before{
+      transform: translate3d(0,100%,0);
+    }
+    &:hover{
+      color: $white;
+      i{
+        color: $white;
+        transform: rotate(-45deg);
+      }
+    }
+}
+
+.project-btn{
+  font-size: 20px;
+  font-weight: 400;
+  font-family: $body-font;
+  position: relative;
+  padding: 12px 32px;
+  margin-bottom: 0px;
+  color: $primary-color;
+  background-color: $secondary-color;
+  display: inline-flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
+  text-decoration: none;
+  border-radius: 40px;
+  i{
+    font-size: 17px;
+    text-align: center;
+    margin-top: 6px;
+    font-weight: 500;
+    margin-right: 2px;
+  }
+  .hover-effect{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 26px;
+    line-height: 1.66;
+    .effect-1{
+      display: block;
+      height: 100%;
+      position: relative;
+      top: 0%;
+      transition: .3s;
+      line-height: 25px;
+    }
+  }
+  &:hover{
+    color: $primary-color;
+  }
+  &:hover{
+    .effect-1{
+      top: -100%;
+    }
+  }
+}
+
+
+
+

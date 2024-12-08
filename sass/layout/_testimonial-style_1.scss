@@ -1,0 +1,172 @@
+.testimonial-section{
+
+    .testimonial-slider{
+        position: relative;
+
+        .testi-single-box{
+            border: 1px solid $secondary-color;
+            padding: 16px 43px 10px 16px;
+            border-radius: 16px;
+            position: relative;
+            transition: .5s;
+            @media(max-width:567px){
+                text-align: center;
+            }
+
+            .box-inner{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 34px;
+                @media(max-width:567px){
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                @include md{
+                    flex-wrap: wrap;
+                }
+
+                .testi-thumb{
+                    max-width: 143px;
+                    width: 100%;
+                    height: 197px;
+                    img{
+                        background: $bg-color_1;
+                        padding: 11px 23px 0px;
+                        border-radius: 16px;
+                        width: 100%;
+                        transition: .5s;
+                        @media(max-width:567px){
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .testi-content{
+
+                        .social-icon{
+                            li{
+                                display: inline-block;
+                                color: $orange-color;
+                                font-size: 16px;
+                            }
+                        }
+                        p{
+                            font-family: $body-font;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 26px;
+                            color: $primary3-color;
+                        }
+                        .title{
+
+                            h6{
+                                font-family: $body-font;
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 28px;
+                                color: $primary-color;
+                            }
+                            span{
+                                font-family: $body-font;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 26px;
+                                color: $primary3-color;
+                            }
+                        }
+
+                }
+
+            }
+
+            .shape{
+                img{
+                    position: absolute;
+                    right: 32px;
+                    bottom: 32px;
+                }
+            }
+            &:hover{
+                background: $bg-color_1;
+                .testi-thumb{
+                    img{
+                        background: $white;
+                    }
+                }
+            }
+
+        }
+
+        .array-button {
+            position: absolute;
+            z-index: 1;
+            bottom: 60px;
+            right: 60px;
+            gap: 10px;
+        
+            .array-next.active {
+              color: $primary-color;
+              background: $btn-color;
+              border-color: $primary-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.array-button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .array-prev,
+    .array-next {
+        display: flex;
+        justify-content: center;
+        -webkit-box-pack: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        border: 1px solid $primary-color;
+        background-color: transparent;
+        transition: background-color 0.3s, transform 0.3s;
+        font-weight: 900;
+        color: $primary-color;
+
+        @include sm {
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
+        }
+
+        @include xs {
+            width: 30px;
+            height: 30px;
+            font-size: 14px;
+        }
+
+        &:hover {
+            background-color: $btn-color;
+            border-color: inherit;
+            color: $white;
+        }
+
+        &.array-next.active{
+            color: $white;
+            background: $btn-color;
+            border-color: $primary-color;
+            border: none;
+        }
+    }
+}

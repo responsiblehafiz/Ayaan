@@ -1,0 +1,117 @@
+.work-section{
+
+    .tab-menu{
+
+            .tab-menu-item{
+
+                    .left-text{
+                        align-items: start;
+                        display: -webkit-inline-box;
+                        gap: 40px;
+                        align-items: start;
+                        margin-bottom: 30px;
+
+                            .text{
+
+                                h2{
+                                    font-family: $body-font;
+                                    font-size: 32px;
+                                    font-weight: 500;
+                                    line-height: 40px;
+                                    color: $primary-color;
+                                    cursor: pointer;
+                                    position: relative;
+                                    &::before{
+                                        position: absolute;
+                                        content: "";
+                                        top: 20px;
+                                        left: -50px;
+                                        height: 2px;
+                                        width: 40px;
+                                        background: $secondary-color;
+                                        transition: .5s;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                    }
+                                }
+                                p{
+                                    font-family: $body-font;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 26px;
+                                    color: $primary3-color;
+                                    max-width: 80%;
+                                }
+                            }
+
+                        .icon{
+                            height: 70px;
+                            width: 70px;
+                            line-height: 70px;
+                            text-align: center;
+                            background: $primary-color;
+                            border-radius: 50%;
+                            display: inline-block;
+                            transition: .5s;
+                            position: relative;
+                            img{
+                                width: 24px;
+                                height: 24px;
+                            }
+                            &:before{
+                                position: absolute;
+                                content: "";
+                                height: 100%;
+                                width: 100%;
+                                left: 0;
+                                top: 0;
+                                bottom: 0;
+                                right: 0;
+                                border-radius: 50%;
+                                background: $secondary-color;
+                                transform: scale(0);
+                                transition: .5s;
+                            }
+                        }
+                        &:hover{
+                            .text{
+                                h2{
+                                    margin-left: 50px;
+                                    &:before{
+                                        opacity: 1;
+                                        visibility: visible;
+                                        // left: 0;
+                                    }
+                                }
+                            }
+                            .icon{
+                                &:before{
+                                    transform: scale(1);
+                                }
+                                img{
+                                    animation: mirror_effect .5s forwards ease-in-out 0s;
+                                }
+                            }
+                        }
+                    }
+            }
+    }
+
+        .tab-content{
+
+                .tab-content-item{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+
+                        img{
+                            max-width: 645px;
+                            width: 100%;
+                            height: 375px;
+                            object-fit: cover;
+                            border-radius: 20px;
+                        }
+                }
+        }
+}
